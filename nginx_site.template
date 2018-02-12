@@ -1,0 +1,12 @@
+server {
+	listen 80 default_server;
+
+	root /usr/share/nginx/html;
+	index index.html index.backup.html;
+
+	add_header X-Served-By docker-nginx;
+
+	server_name localhost;
+	
+	error_page 404 https://www.theuselesswebindex.com/error;
+}

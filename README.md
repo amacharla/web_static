@@ -1,2 +1,1 @@
-# web_static
-Automatic build for Application Accelerator
+Application Accelerator Prototype 4

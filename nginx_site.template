@@ -2,7 +2,7 @@ server {
 	listen 80 default_server;
 
 	root /usr/share/nginx/html;
-	index sindex.html index.html;
+	index index.html;
 
 	add_header X-Served-By docker-nginx;
 

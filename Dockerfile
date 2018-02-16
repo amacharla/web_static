@@ -10,7 +10,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 EXPOSE 80
 
 # Move respective files to right location based on configration
-COPY web_app/static /usr/share/nginx/html
+COPY static /usr/share/nginx/html
 COPY nginx_site.template /etc/nginx/conf.d/nginx_site.template
 
 # Remove default configuration from Nginx and add custom

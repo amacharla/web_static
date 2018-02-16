@@ -7,11 +7,10 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 	&& ln -sf /dev/stderr /var/log/nginx/error.log
 
 # tell the container what port will be using 
-# App server is listening on port 80 to server dynamic content..i think
 EXPOSE 80
 
 # Move respective files to right location based on configration
-COPY static /usr/share/nginx/html
+COPY web_app/static /usr/share/nginx/html
 COPY nginx_site.template /etc/nginx/conf.d/nginx_site.template
 
 # Remove default configuration from Nginx and add custom
